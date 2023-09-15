@@ -22,13 +22,14 @@
    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301  USA
 */
 
+#include "my_config.h"
 #include "util/require.h"
 #include <NdbSqlUtil.hpp>
 
 #include <cmath>
 
 #include "my_byteorder.h"
-#include "m_ctype.h"
+#include "mysql/strings/m_ctype.h"
 
 /*
  * Data types.  The entries must be in the numerical order.

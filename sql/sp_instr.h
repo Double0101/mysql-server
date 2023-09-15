@@ -30,7 +30,6 @@
 
 #include "field_types.h"
 #include "lex_string.h"
-#include "m_string.h"
 #include "my_alloc.h"
 #include "my_compiler.h"
 
@@ -44,6 +43,7 @@
 #include "sql/sql_lex.h"
 #include "sql/sql_list.h"
 #include "sql_string.h"
+#include "string_with_len.h"
 
 class Item;
 class Item_case_expr;
@@ -287,6 +287,8 @@ class sp_lex_instr : public sp_instr {
     @return Error status.
   */
   bool reset_lex_and_exec_core(THD *thd, uint *nextp, bool open_tables);
+
+  bool execute_expression(THD *thd, uint *nextp);
 
   /**
     (Re-)parse the query corresponding to this instruction and return a new

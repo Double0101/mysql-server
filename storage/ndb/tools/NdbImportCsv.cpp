@@ -25,8 +25,9 @@
 #include "util/require.h"
 #include <time.h>
 
-#include "m_ctype.h"
+#include "mysql/strings/m_ctype.h"
 #include "my_byteorder.h"
+#include "my_config.h"
 #include "my_sys.h"
 #include <inttypes.h>
 #include <NdbSqlUtil.hpp>
